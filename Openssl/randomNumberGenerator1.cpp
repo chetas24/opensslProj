@@ -19,6 +19,7 @@ int main() {
         // Convert the random bytes to an unsigned int
         unsigned int randomNum;
         memcpy(&randomNum, buffer, sizeof(randomNum));
+        // memcpy is the copy function to copy buffer to randomNum
 
         std::cout << "Random Number " << i + 1 << ": " << randomNum << std::endl;
     }
