@@ -9,6 +9,9 @@ int main() {
     
     RAND_poll();
 
+    // We can also use RAND_seed() custom number seed data that adds entropy to the random number generator. 
+    // Entropy is a measure of randomness or unpredictability
+
     // Generating multiple random numbers
     for (int i = 0; i < NUM_RANDOM_NUMBERS; i++) {
         if (RAND_bytes(buffer, sizeof(buffer)) != 1) {
