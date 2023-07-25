@@ -16,6 +16,10 @@ std::string generateRandomPassword(int length) {
     }
 
     // Convert random bytes to password characters
+    // if the valid_char is 66
+    // random byte from buffer example 150
+    // therefore 150 % 66 = 18
+    // 18 = r, then r is appended to password
     for (int i = 0; i < length; ++i) {
         unsigned char randomChar = buffer[i] % valid_chars.length();
         password += valid_chars[randomChar];
